@@ -1,0 +1,134 @@
+{
+"_xcpMemberTypes":{
+"model": "xcp.picklist.models.StringModel",
+"data": [{
+"value": "user",
+"label": "${_UI_PickList__xcpMemberTypes_user}"
+},
+{
+"value": "group",
+"label": "${_UI_PickList__xcpMemberTypes_group}"
+}]
+},
+"sgd_pl_procedencia":{
+"model": "xcp.picklist.models.StringModel",
+"data": [{
+"value": "ENTIDAD VIGILADA",
+"label": "${_UI_PickList_sgd_pl_procedencia_ENTIDAD_VIGILADA}"
+},
+{
+"value": "PERSONA NATURAL",
+"label": "${_UI_PickList_sgd_pl_procedencia_PERSONA_NATURAL}"
+},
+{
+"value": "PERSONA JURIDICA",
+"label": "${_UI_PickList_sgd_pl_procedencia_PERSONA_JURIDICA}"
+},
+{
+"value": "INSTITUCIONES",
+"label": "${_UI_PickList_sgd_pl_procedencia_INSTITUCIONES}"
+}]
+},
+"xcp_wq_view_filter":{
+"model": "xcp.picklist.models.StringModel",
+"data": [{
+"value": "SHOW_ALL_TASKS",
+"label": "${_UI_PickList_xcp_wq_view_filter_SHOW_ALL_TASKS}"
+},
+{
+"value": "SHOW_PROCESSOR_ELIGIBLE_AND_OWNED_TASKS",
+"label": "${_UI_PickList_xcp_wq_view_filter_SHOW_PROCESSOR_ELIGIBLE_AND_OWNED_TASKS}"
+},
+{
+"value": "SHOW_UNASSIGNED_TASKS",
+"label": "${_UI_PickList_xcp_wq_view_filter_SHOW_UNASSIGNED_TASKS}"
+},
+{
+"value": "SHOW_PROCESSOR_ELIGIBLE_TASKS",
+"label": "${_UI_PickList_xcp_wq_view_filter_SHOW_PROCESSOR_ELIGIBLE_TASKS}"
+}]
+},
+"xcp_task_state":{
+"model": "xcp.picklist.models.IntegerModel",
+"data": [{
+"value": 0,
+"label": "${_UI_PickList_xcp_task_state_0}"
+},
+{
+"value": 1,
+"label": "${_UI_PickList_xcp_task_state_1}"
+},
+{
+"value": 2,
+"label": "${_UI_PickList_xcp_task_state_2}"
+},
+{
+"value": 3,
+"label": "${_UI_PickList_xcp_task_state_3}"
+},
+{
+"value": 4,
+"label": "${_UI_PickList_xcp_task_state_4}"
+},
+{
+"value": 5,
+"label": "${_UI_PickList_xcp_task_state_5}"
+},
+{
+"value": 6,
+"label": "${_UI_PickList_xcp_task_state_6}"
+},
+{
+"value": 7,
+"label": "${_UI_PickList_xcp_task_state_7}"
+}]
+},
+"sgd_pl_tipoidentificaci":{
+"model": "xcp.picklist.models.StringModel",
+"data": [{
+"value": "DNI",
+"label": "${_UI_PickList_sgd_pl_tipoidentificaci_DNI}"
+},
+{
+"value": "RUC",
+"label": "${_UI_PickList_sgd_pl_tipoidentificaci_RUC}"
+}]
+},
+"xcp_taskstatuspiclkist":{
+"model": "xcp.picklist.models.StringModel",
+"data": [{
+"value": "dormant",
+"label": "${_UI_PickList_xcp_taskstatuspiclkist_dormant}"
+},
+{
+"value": "acquired",
+"label": "${_UI_PickList_xcp_taskstatuspiclkist_acquired}"
+},
+{
+"value": "ready",
+"label": "${_UI_PickList_xcp_taskstatuspiclkist_ready}"
+},
+{
+"value": "paused",
+"label": "${_UI_PickList_xcp_taskstatuspiclkist_paused}"
+}]
+},
+"xcp_taskwqflagpicklist":{
+"model": "xcp.picklist.models.IntegerModel",
+"data": [{
+"value": 1,
+"label": "${_UI_PickList_xcp_taskwqflagpicklist_1}"
+},
+{
+"value": 0,
+"label": "${_UI_PickList_xcp_taskwqflagpicklist_0}"
+}]
+},
+"sgd_pl_unidad_responsab":{
+"model": "xcp.picklist.models.StringModel",
+"data": [{
+"value": "GTI",
+"label": "${_UI_PickList_sgd_pl_unidad_responsab_GTI}"
+}]
+}
+}

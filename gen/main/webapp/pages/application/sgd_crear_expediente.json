@@ -1,0 +1,541 @@
+{
+  "padding" : "0",
+  "border" : false,
+  "pageTitle" : "${_UI_Page_sgd_crear_expediente_title}",
+  "xtype" : "xcp_form",
+  "items" : [ {
+    "xtype" : "xcp_action_container",
+    "actions" : [ {
+      "xcpId" : "da_def_invoke_stateless_processcrear_expediente_si_initiate_button",
+      "redirectStyle" : "application",
+      "actionType" : "create",
+      "autoLoad" : "true",
+      "pageSize" : "10",
+      "outputType" : "Array",
+      "showConfirmation" : true,
+      "showSuccessNotification" : true,
+      "redirectUrl" : "application/sgd_busqueda_expediente",
+      "actionModel" : "sgd_da_def_invoke_stateless_processcrear_expediente_si_initiate",
+      "plugins" : [ {
+        "ptype" : "xcp_expression_properties",
+        "expression" : [ {
+          "propertyId" : "ampliacion_asunto",
+          "setterFunName" : "setInputProperty",
+          "etype" : "sgd_crear_expediente_da_def_invoke_stateless_processcrear_expediente_si_initiate_ampliacion_asunto_1",
+          "events" : ["amp_asunto.change" ]
+        }, {
+          "propertyId" : "asunto",
+          "setterFunName" : "setInputProperty",
+          "etype" : "sgd_crear_expediente_da_def_invoke_stateless_processcrear_expediente_si_initiate_asunto_1",
+          "events" : ["asunto.change" ]
+        }, {
+          "propertyId" : "conforme",
+          "setterFunName" : "setInputProperty",
+          "etype" : "sgd_crear_expediente_da_def_invoke_stateless_processcrear_expediente_si_initiate_conforme_1",
+          "events" : ["docs_conformes.change" ]
+        }, {
+          "propertyId" : "departamento",
+          "setterFunName" : "setInputProperty",
+          "etype" : "sgd_crear_expediente_da_def_invoke_stateless_processcrear_expediente_si_initiate_departamento_1",
+          "events" : ["departamento.change" ]
+        }, {
+          "propertyId" : "direccion",
+          "setterFunName" : "setInputProperty",
+          "etype" : "sgd_crear_expediente_da_def_invoke_stateless_processcrear_expediente_si_initiate_direccion_1",
+          "events" : ["direccion.change" ]
+        }, {
+          "propertyId" : "distrito",
+          "setterFunName" : "setInputProperty",
+          "etype" : "sgd_crear_expediente_da_def_invoke_stateless_processcrear_expediente_si_initiate_distrito_1",
+          "events" : ["distrito.change" ]
+        }, {
+          "propertyId" : "email",
+          "setterFunName" : "setInputProperty",
+          "etype" : "sgd_crear_expediente_da_def_invoke_stateless_processcrear_expediente_si_initiate_email_1",
+          "events" : ["email.change" ]
+        }, {
+          "propertyId" : "es_confidencial",
+          "setterFunName" : "setInputProperty",
+          "etype" : "sgd_crear_expediente_da_def_invoke_stateless_processcrear_expediente_si_initiate_es_confidencial_1",
+          "events" : ["es_confidencial.change" ]
+        }, {
+          "propertyId" : "fax",
+          "setterFunName" : "setInputProperty",
+          "etype" : "sgd_crear_expediente_da_def_invoke_stateless_processcrear_expediente_si_initiate_fax_1",
+          "events" : ["fax.change" ]
+        }, {
+          "propertyId" : "fecha_doc_origen",
+          "setterFunName" : "setInputProperty",
+          "etype" : "sgd_crear_expediente_da_def_invoke_stateless_processcrear_expediente_si_initiate_fecha_doc_origen_1",
+          "events" : ["fecha_doc_origen.change" ]
+        }, {
+          "propertyId" : "inicia_pas",
+          "setterFunName" : "setInputProperty",
+          "etype" : "sgd_crear_expediente_da_def_invoke_stateless_processcrear_expediente_si_initiate_inicia_pas_1",
+          "events" : ["inicia_pas.change" ]
+        }, {
+          "propertyId" : "numero_doc_origen",
+          "setterFunName" : "setInputProperty",
+          "etype" : "sgd_crear_expediente_da_def_invoke_stateless_processcrear_expediente_si_initiate_numero_doc_origen_1",
+          "events" : ["numero_doc_origen.change" ]
+        }, {
+          "propertyId" : "numero_identificacion",
+          "setterFunName" : "setInputProperty",
+          "etype" : "sgd_crear_expediente_da_def_invoke_stateless_processcrear_expediente_si_initiate_numero_identificacion_1",
+          "events" : ["numero_doc_identidad.change" ]
+        }, {
+          "propertyId" : "procedencia",
+          "setterFunName" : "setInputProperty",
+          "etype" : "sgd_crear_expediente_da_def_invoke_stateless_processcrear_expediente_si_initiate_procedencia_1",
+          "events" : ["procedencia.change" ]
+        }, {
+          "propertyId" : "provincia",
+          "setterFunName" : "setInputProperty",
+          "etype" : "sgd_crear_expediente_da_def_invoke_stateless_processcrear_expediente_si_initiate_provincia_1",
+          "events" : ["provincia.change" ]
+        }, {
+          "propertyId" : "remitente",
+          "setterFunName" : "setInputProperty",
+          "etype" : "sgd_crear_expediente_da_def_invoke_stateless_processcrear_expediente_si_initiate_remitente_1",
+          "events" : ["remitente.change" ]
+        }, {
+          "propertyId" : "telefono",
+          "setterFunName" : "setInputProperty",
+          "etype" : "sgd_crear_expediente_da_def_invoke_stateless_processcrear_expediente_si_initiate_telefono_1",
+          "events" : ["telefono.change" ]
+        }, {
+          "propertyId" : "tipo_doc_origen",
+          "setterFunName" : "setInputProperty",
+          "etype" : "sgd_crear_expediente_da_def_invoke_stateless_processcrear_expediente_si_initiate_tipo_doc_origen_1",
+          "events" : ["tipo_doc_origen.change" ]
+        }, {
+          "propertyId" : "tipo_identificacion",
+          "setterFunName" : "setInputProperty",
+          "etype" : "sgd_crear_expediente_da_def_invoke_stateless_processcrear_expediente_si_initiate_tipo_identificacion_1",
+          "events" : ["tipo_identificacion.change" ]
+        }, {
+          "propertyId" : "unidad_responsable",
+          "setterFunName" : "setInputProperty",
+          "etype" : "sgd_crear_expediente_da_def_invoke_stateless_processcrear_expediente_si_initiate_unidad_responsable_1",
+          "events" : ["unidad_responsable.change" ]
+        } ],
+        "mapping" : {
+          "ampliacion_asunto" : ["amp_asunto" ],
+          "asunto" : ["asunto" ],
+          "conforme" : ["docs_conformes" ],
+          "departamento" : ["departamento" ],
+          "direccion" : ["direccion" ],
+          "distrito" : ["distrito" ],
+          "email" : ["email" ],
+          "es_confidencial" : ["es_confidencial" ],
+          "fax" : ["fax" ],
+          "fecha_doc_origen" : ["fecha_doc_origen" ],
+          "inicia_pas" : ["inicia_pas" ],
+          "numero_doc_origen" : ["numero_doc_origen" ],
+          "numero_identificacion" : ["numero_doc_identidad" ],
+          "procedencia" : ["procedencia" ],
+          "provincia" : ["provincia" ],
+          "remitente" : ["remitente" ],
+          "telefono" : ["telefono" ],
+          "tipo_doc_origen" : ["tipo_doc_origen" ],
+          "tipo_identificacion" : ["tipo_identificacion" ],
+          "unidad_responsable" : ["unidad_responsable" ]
+        }
+      } ]
+    }, {
+      "xcpId" : "obtener_departement_initiate_staless_ds",
+      "actionModel" : "sgd_obtener_departement_initiate_staless_ds_outputs",
+      "plugins" : [ {
+        "ptype" : "xcp_expression_properties",
+        "expression" : [ ],
+        "mapping" : {
+        }
+      } ],
+      "actionType" : "datasource",
+      "autoLoad" : true
+    }, {
+      "xcpId" : "obtener_provincias__initiate_staless_ds",
+      "actionModel" : "sgd_obtener_provincias__initiate_staless_ds_outputs",
+      "plugins" : [ {
+        "ptype" : "xcp_expression_properties",
+        "expression" : [ {
+          "propertyId" : "id_departamento",
+          "setterFunName" : "setInputProperty",
+          "etype" : "sgd_crear_expediente_obtener_provincias__initiate_staless_ds_id_departamento_1",
+          "events" : ["departamento.change" ]
+        } ],
+        "mapping" : {
+          "id_departamento" : ["departamento" ]
+        }
+      } ],
+      "actionType" : "datasource",
+      "autoLoad" : false,
+      "invokerEvents" : ["departamento.change" ]
+    }, {
+      "xcpId" : "obtener_distritos_p_initiate_staless_ds",
+      "actionModel" : "sgd_obtener_distritos_p_initiate_staless_ds_outputs",
+      "plugins" : [ {
+        "ptype" : "xcp_expression_properties",
+        "expression" : [ {
+          "propertyId" : "id_provincia",
+          "setterFunName" : "setInputProperty",
+          "etype" : "sgd_crear_expediente_obtener_distritos_p_initiate_staless_ds_id_provincia_1",
+          "events" : ["provincia.change" ]
+        }, {
+          "propertyId" : "id_departamento",
+          "setterFunName" : "setInputProperty",
+          "etype" : "sgd_crear_expediente_obtener_distritos_p_initiate_staless_ds_id_departamento_1",
+          "events" : ["departamento.change" ]
+        } ],
+        "mapping" : {
+          "id_provincia" : ["provincia" ],
+          "id_departamento" : ["departamento" ]
+        }
+      } ],
+      "actionType" : "datasource",
+      "autoLoad" : false,
+      "invokerEvents" : ["provincia.change","departamento.change" ]
+    } ]
+  }, {
+    "xcpId" : "column_box",
+    "xtype" : "xcp_column_box",
+    "title" : "${_UI_Page_sgd_crear_expediente_column_box_title}",
+    "collapsible" : false,
+    "collapsed" : false,
+    "collapseFirst" : true,
+    "border" : false,
+    "defaultMargins" : "5",
+    "layout" : "xcp_columnbox",
+    "items" : [ {
+      "xcpId" : "columnvbox",
+      "xtype" : "xcp_columnvbox",
+      "orientation" : "Vertical",
+      "overflow_x" : "hidden",
+      "labelWidth" : 150,
+      "labelAlign" : "left",
+      "halign" : "left",
+      "valign" : "top",
+      "defaultMargins" : "5",
+      "items" : [ {
+        "xcpId" : "tab_group",
+        "xtype" : "xcp_tab_group",
+        "tabPosition" : "top",
+        "minWidth" : 450,
+        "items" : [ {
+          "xcpId" : "tab",
+          "xtype" : "xcp_tab",
+          "title" : "${_UI_Page_sgd_crear_expediente_tab_title}",
+          "items" : [ {
+            "xcpId" : "column_box1",
+            "xtype" : "xcp_column_box",
+            "collapsible" : false,
+            "collapsed" : false,
+            "collapseFirst" : true,
+            "border" : false,
+            "defaultMargins" : "5",
+            "layout" : "xcp_columnbox",
+            "items" : [ {
+              "xcpId" : "columnvbox1",
+              "xtype" : "xcp_columnvbox",
+              "orientation" : "Vertical",
+              "overflow_x" : "hidden",
+              "labelWidth" : 150,
+              "labelAlign" : "left",
+              "halign" : "left",
+              "valign" : "top",
+              "defaultMargins" : "5",
+              "items" : [ {
+                "xcpId" : "unidad_responsable",
+                "xtype" : "xcp_dropdown_list",
+                "fieldLabel" : "${_UI_Page_sgd_crear_expediente_unidad_responsable_fieldLabel}",
+                "store" : "xcp.picklist.sgd_pl_unidad_responsab",
+                "valueType" : "STRING"
+              }, {
+                "xcpId" : "procedencia",
+                "xtype" : "xcp_dropdown_list",
+                "fieldLabel" : "${_UI_Page_sgd_crear_expediente_procedencia_fieldLabel}",
+                "store" : "xcp.picklist.sgd_pl_procedencia",
+                "valueType" : "STRING"
+              }, {
+                "xcpId" : "remitente",
+                "xtype" : "xcp_text_input",
+                "fieldLabel" : "${_UI_Page_sgd_crear_expediente_remitente_fieldLabel}",
+                "hstretch" : true,
+                "valueType" : "STRING"
+              }, {
+                "xcpId" : "column_box2",
+                "xtype" : "xcp_column_box",
+                "collapsible" : false,
+                "collapsed" : false,
+                "collapseFirst" : true,
+                "border" : false,
+                "defaultMargins" : "5",
+                "layout" : "xcp_columnbox",
+                "items" : [ {
+                  "xcpId" : "columnvbox3",
+                  "xtype" : "xcp_columnvbox",
+                  "orientation" : "Vertical",
+                  "width" : "15",
+                  "overflow_x" : "hidden",
+                  "labelWidth" : 150,
+                  "labelAlign" : "left",
+                  "halign" : "left",
+                  "valign" : "top",
+                  "defaultMargins" : "5"
+                }, {
+                  "xcpId" : "columnvbox4",
+                  "xtype" : "xcp_columnvbox",
+                  "orientation" : "Vertical",
+                  "overflow_x" : "hidden",
+                  "labelWidth" : 150,
+                  "labelAlign" : "left",
+                  "halign" : "left",
+                  "valign" : "top",
+                  "defaultMargins" : "5",
+                  "items" : [ {
+                    "xcpId" : "tipo_identificacion",
+                    "xtype" : "xcp_dropdown_list",
+                    "fieldLabel" : "${_UI_Page_sgd_crear_expediente_tipo_identificacion_fieldLabel}",
+                    "store" : "xcp.picklist.sgd_pl_tipoidentificaci",
+                    "valueType" : "STRING"
+                  }, {
+                    "xcpId" : "numero_doc_identidad",
+                    "xtype" : "xcp_number_input",
+                    "fieldLabel" : "${_UI_Page_sgd_crear_expediente_numero_doc_identidad_fieldLabel}",
+                    "hideTrigger" : true,
+                    "keyNavEnabled" : false,
+                    "mouseWheelEnabled" : false,
+                    "autoStripChars" : true,
+                    "hstretch" : true,
+                    "valueType" : "STRING"
+                  } ]
+                } ]
+              } ]
+            }, {
+              "xcpId" : "columnvbox2",
+              "xtype" : "xcp_columnvbox",
+              "orientation" : "Vertical",
+              "overflow_x" : "hidden",
+              "labelWidth" : 150,
+              "labelAlign" : "left",
+              "halign" : "left",
+              "valign" : "top",
+              "defaultMargins" : "5",
+              "items" : [ {
+                "xcpId" : "tipo_doc_origen",
+                "xtype" : "xcp_text_input",
+                "fieldLabel" : "${_UI_Page_sgd_crear_expediente_tipo_doc_origen_fieldLabel}",
+                "hstretch" : true,
+                "valueType" : "STRING"
+              }, {
+                "xcpId" : "numero_doc_origen",
+                "xtype" : "xcp_text_input",
+                "fieldLabel" : "${_UI_Page_sgd_crear_expediente_numero_doc_origen_fieldLabel}",
+                "hstretch" : true,
+                "valueType" : "STRING"
+              }, {
+                "xcpId" : "fecha_doc_origen",
+                "xtype" : "xcp_date_time_input",
+                "fieldLabel" : "${_UI_Page_sgd_crear_expediente_fecha_doc_origen_fieldLabel}",
+                "hstretch" : true,
+                "format" : {
+                  "xtype" : "xcp_datetime_formatter",
+                  "dateFormat" : "short",
+                  "timeFormat" : "short",
+                  "dateStyle" : "datetime"
+                },
+                "valueType" : "DATETIME"
+              }, {
+                "xcpId" : "asunto",
+                "xtype" : "xcp_text_input",
+                "fieldLabel" : "${_UI_Page_sgd_crear_expediente_asunto_fieldLabel}",
+                "hstretch" : true,
+                "valueType" : "STRING"
+              }, {
+                "xcpId" : "amp_asunto",
+                "xtype" : "xcp_text_area",
+                "fieldLabel" : "${_UI_Page_sgd_crear_expediente_amp_asunto_fieldLabel}",
+                "hstretch" : true,
+                "valueType" : "STRING",
+                "height" : 60
+              } ]
+            } ]
+          } ]
+        }, {
+          "xcpId" : "tab1",
+          "xtype" : "xcp_tab",
+          "title" : "${_UI_Page_sgd_crear_expediente_tab1_title}",
+          "items" : [ {
+            "xcpId" : "column_box3",
+            "xtype" : "xcp_column_box",
+            "collapsible" : false,
+            "collapsed" : false,
+            "collapseFirst" : true,
+            "border" : false,
+            "defaultMargins" : "5",
+            "layout" : "xcp_columnbox",
+            "items" : [ {
+              "xcpId" : "columnvbox5",
+              "xtype" : "xcp_columnvbox",
+              "orientation" : "Vertical",
+              "overflow_x" : "hidden",
+              "labelWidth" : 150,
+              "labelAlign" : "left",
+              "halign" : "left",
+              "valign" : "top",
+              "defaultMargins" : "5",
+              "items" : [ {
+                "xcpId" : "direccion",
+                "xtype" : "xcp_text_input",
+                "fieldLabel" : "${_UI_Page_sgd_crear_expediente_direccion_fieldLabel}",
+                "hstretch" : true,
+                "valueType" : "STRING"
+              }, {
+                "xcpId" : "departamento",
+                "xtype" : "xcp_dropdown_list",
+                "fieldLabel" : "${_UI_Page_sgd_crear_expediente_departamento_fieldLabel}",
+                "valueField" : "id_departamento",
+                "displayField" : "departamento",
+                "store" : "obtener_departement_initiate_staless_ds",
+                "valueType" : "INTEGER"
+              }, {
+                "xcpId" : "provincia",
+                "xtype" : "xcp_dropdown_list",
+                "fieldLabel" : "${_UI_Page_sgd_crear_expediente_provincia_fieldLabel}",
+                "emptyText" : "${_UI_Page_sgd_crear_expediente_provincia_emptyText}",
+                "valueField" : "id_provincia",
+                "displayField" : "provincia",
+                "store" : "obtener_provincias__initiate_staless_ds",
+                "valueType" : "INTEGER"
+              }, {
+                "xcpId" : "distrito",
+                "xtype" : "xcp_dropdown_list",
+                "fieldLabel" : "${_UI_Page_sgd_crear_expediente_distrito_fieldLabel}",
+                "emptyText" : "${_UI_Page_sgd_crear_expediente_distrito_emptyText}",
+                "valueField" : "id_distrito",
+                "displayField" : "distrito",
+                "store" : "obtener_distritos_p_initiate_staless_ds",
+                "valueType" : "INTEGER"
+              } ]
+            }, {
+              "xcpId" : "columnvbox6",
+              "xtype" : "xcp_columnvbox",
+              "orientation" : "Vertical",
+              "overflow_x" : "hidden",
+              "labelWidth" : 150,
+              "labelAlign" : "left",
+              "halign" : "left",
+              "valign" : "top",
+              "defaultMargins" : "5",
+              "items" : [ {
+                "xcpId" : "telefono",
+                "xtype" : "xcp_text_input",
+                "fieldLabel" : "${_UI_Page_sgd_crear_expediente_telefono_fieldLabel}",
+                "hstretch" : true,
+                "valueType" : "STRING"
+              }, {
+                "xcpId" : "fax",
+                "xtype" : "xcp_text_input",
+                "fieldLabel" : "${_UI_Page_sgd_crear_expediente_fax_fieldLabel}",
+                "hstretch" : true,
+                "valueType" : "STRING"
+              }, {
+                "xcpId" : "email",
+                "xtype" : "xcp_text_input",
+                "fieldLabel" : "${_UI_Page_sgd_crear_expediente_email_fieldLabel}",
+                "hstretch" : true,
+                "valueType" : "STRING"
+              } ]
+            } ]
+          } ]
+        } ]
+      }, {
+        "xcpId" : "column_box4",
+        "xtype" : "xcp_column_box",
+        "collapsible" : false,
+        "collapsed" : false,
+        "collapseFirst" : true,
+        "border" : false,
+        "defaultMargins" : "5",
+        "layout" : "xcp_columnbox",
+        "items" : [ {
+          "xcpId" : "columnvbox7",
+          "xtype" : "xcp_columnvbox",
+          "orientation" : "Vertical",
+          "width" : "365",
+          "overflow_x" : "hidden",
+          "labelWidth" : 120,
+          "labelAlign" : "left",
+          "halign" : "left",
+          "valign" : "top",
+          "defaultMargins" : "5",
+          "items" : [ {
+            "xcpId" : "rich_text",
+            "xtype" : "xcp_rich_text",
+            "html" : "${_UI_Page_sgd_crear_expediente_rich_text_html}"
+          }, {
+            "xcpId" : "rich_text1",
+            "xtype" : "xcp_rich_text",
+            "html" : "${_UI_Page_sgd_crear_expediente_rich_text1_html}"
+          }, {
+            "xcpId" : "rich_text2",
+            "xtype" : "xcp_rich_text",
+            "html" : "${_UI_Page_sgd_crear_expediente_rich_text2_html}"
+          } ]
+        }, {
+          "xcpId" : "columnvbox8",
+          "xtype" : "xcp_columnvbox",
+          "orientation" : "Vertical",
+          "width" : "35",
+          "overflow_x" : "hidden",
+          "labelWidth" : 150,
+          "labelAlign" : "left",
+          "halign" : "left",
+          "valign" : "top",
+          "defaultMargins" : "5",
+          "items" : [ {
+            "xcpId" : "docs_conformes",
+            "xtype" : "xcp_checkbox",
+            "fieldLabel" : "",
+            "valueType" : "BOOLEAN"
+          }, {
+            "xcpId" : "es_confidencial",
+            "xtype" : "xcp_checkbox",
+            "fieldLabel" : "",
+            "valueType" : "BOOLEAN"
+          }, {
+            "xcpId" : "inicia_pas",
+            "xtype" : "xcp_checkbox",
+            "fieldLabel" : "",
+            "valueType" : "BOOLEAN"
+          } ]
+        }, {
+          "xcpId" : "columnvbox9",
+          "xtype" : "xcp_columnhbox",
+          "orientation" : "Horizontal",
+          "overflow_x" : "hidden",
+          "labelWidth" : 150,
+          "defaultMargins" : "5",
+          "labelAlign" : "left",
+          "halign" : "center",
+          "valign" : "middle",
+          "items" : [ {
+            "xcpId" : "button",
+            "xtype" : "xcp_button",
+            "text" : "${_UI_Page_sgd_crear_expediente_button_text}",
+            "actionInstanceId" : "da_def_invoke_stateless_processcrear_expediente_si_initiate_button"
+          }, {
+            "xcpId" : "button1",
+            "xtype" : "xcp_button",
+            "text" : "${_UI_Page_sgd_crear_expediente_button1_text}",
+            "action" : {
+              "redirectStyle" : "application",
+              "actionType" : "xcp_gotopage",
+              "redirectUrl" : "application/sgd_busqueda_expediente"
+            }
+          } ]
+        } ]
+      } ]
+    } ]
+  } ]
+}

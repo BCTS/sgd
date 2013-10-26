@@ -1,0 +1,138 @@
+{
+  "padding" : "0",
+  "border" : false,
+  "pageTitle" : "${_UI_Page_sgd_ver_expediente_sisg_title}",
+  "xtype" : "xcp_form",
+  "modelImmutable" : true,
+  "models" : [ "sgd_expediente_sisged" ],
+  "items" : [ {
+    "xtype" : "xcp_action_container",
+    "actions" : [ {
+      "xcpId" : "folderQuery",
+      "actionModel" : "xcp_folderQuery_outputs",
+      "plugins" : [ {
+        "ptype" : "xcp_expression_properties",
+        "expression" : [ {
+          "propertyId" : "folder_id",
+          "setterFunName" : "setInputProperty",
+          "etype" : "sgd_ver_expediente_sisg_folderQuery_folder_id_1",
+          "events" : ["sgd_expediente_sisged.change","sgd_expediente_sisged.load" ]
+        } ],
+        "mapping" : {
+        }
+      } ],
+      "actionType" : "datasource",
+      "autoLoad" : false,
+      "invokerEvents" : ["sgd_expediente_sisged.change","sgd_expediente_sisged.load" ]
+    } ]
+  }, {
+    "xcpId" : "column_box",
+    "xtype" : "xcp_column_box",
+    "collapsible" : false,
+    "collapsed" : false,
+    "collapseFirst" : true,
+    "border" : false,
+    "defaultMargins" : "5",
+    "layout" : "xcp_columnbox",
+    "items" : [ {
+      "xcpId" : "columnvbox",
+      "xtype" : "xcp_columnvbox",
+      "orientation" : "Vertical",
+      "overflow_x" : "hidden",
+      "labelWidth" : 75,
+      "labelAlign" : "left",
+      "halign" : "left",
+      "valign" : "top",
+      "defaultMargins" : "5",
+      "items" : [ {
+        "xcpId" : "object_name",
+        "xtype" : "xcp_value_display",
+        "fieldLabel" : "${_UI_Page_sgd_ver_expediente_sisg_object_name_fieldLabel}",
+        "valueType" : "STRING",
+        "isRepeating" : false,
+        "name" : "sgd_expediente_sisged@object_name"
+      } ]
+    }, {
+      "xcpId" : "columnhbox",
+      "xtype" : "xcp_columnhbox",
+      "orientation" : "Horizontal",
+      "minWidth" : 675,
+      "overflow_x" : "hidden",
+      "labelWidth" : 75,
+      "defaultMargins" : "5",
+      "labelAlign" : "left",
+      "halign" : "right",
+      "valign" : "top"
+    } ]
+  }, {
+    "xcpId" : "column_box1",
+    "xtype" : "xcp_column_box",
+    "collapsible" : false,
+    "collapsed" : false,
+    "collapseFirst" : true,
+    "border" : false,
+    "defaultMargins" : "5",
+    "layout" : "xcp_columnbox",
+    "items" : [ {
+      "xcpId" : "columnvbox1",
+      "xtype" : "xcp_columnvbox",
+      "orientation" : "Vertical",
+      "width" : "60%",
+      "overflow_x" : "hidden",
+      "labelWidth" : 150,
+      "labelAlign" : "left",
+      "halign" : "left",
+      "valign" : "top",
+      "defaultMargins" : "5",
+      "items" : [ {
+        "xcpId" : "column_box2",
+        "xtype" : "xcp_column_box",
+        "title" : "${_UI_Page_sgd_ver_expediente_sisg_column_box2_title}",
+        "collapsible" : false,
+        "collapsed" : false,
+        "collapseFirst" : true,
+        "border" : false,
+        "defaultMargins" : "5",
+        "layout" : "xcp_columnbox",
+        "items" : [ {
+          "xcpId" : "columnvbox2",
+          "xtype" : "xcp_columnvbox",
+          "orientation" : "Vertical",
+          "overflow_x" : "hidden",
+          "labelWidth" : 150,
+          "labelAlign" : "left",
+          "halign" : "left",
+          "valign" : "top",
+          "defaultMargins" : "5"
+        }, {
+          "xcpId" : "columnvbox3",
+          "xtype" : "xcp_columnvbox",
+          "orientation" : "Vertical",
+          "overflow_x" : "hidden",
+          "labelWidth" : 150,
+          "labelAlign" : "left",
+          "halign" : "left",
+          "valign" : "top",
+          "defaultMargins" : "5"
+        } ]
+      }, {
+        "xcpId" : "folder_view",
+        "xtype" : "xcp_folder_view",
+        "isID" : true,
+        "showRootFiles" : false,
+        "minWidth" : 500,
+        "plugins" : [ {
+          "ptype" : "xcp_expression_properties",
+          "expression" : [ {
+            "propertyId" : "root",
+            "setterFunName" : "setFolderRoot",
+            "etype" : "sgd_ver_expediente_sisg_folder_view_root_1",
+            "events" : ["sgd_expediente_sisged.change","sgd_expediente_sisged.load" ],
+            "disableProcessingOnRender" : false,
+            "initialDefaultExprValue" : null
+          } ]
+        } ]
+      } ]
+    } ]
+  } ]
+}

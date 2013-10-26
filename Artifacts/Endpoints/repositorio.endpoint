@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nsEndpoint:RepositoryEndpoint xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:nsEndpoint="http://xcp.emc.com/endpoint" urn="urn:sgd:com.emc.xcp.artifact.endpoint:Artifacts/Endpoints/repositorio.endpoint" categoryId="com.emc.xcp.artifact.endpoint" name="repositorio" label="repositorio" docbrokerHostName="AMAZONA-OFTAL28" repositoryName="documentum" username="dmadmin" password="DM_ENCR_TEXT_V2=AAAAEMnAb9p87UHFtirJ/iIA5TqoQH8Bc8a/w2oSjFqRHchuZwKEs/xKGODwQ0UJKKqtL8J9IIkQv5kMk8mGa3RrGWgKXLUxasG6pYEy6hYBuljA"/>

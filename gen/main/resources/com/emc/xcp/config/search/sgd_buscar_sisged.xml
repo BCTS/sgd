@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean class="com.emc.xcp.services.datasource.domain.SearchQuery" id="sgd_buscar_sisged">
+  <property name="columns">
+    <list>
+      <bean class="com.emc.xcp.services.datasource.domain.Column">
+        <property name="property" value="id"/>
+        <property name="sortable" value="false"/>
+      </bean>
+      <bean class="com.emc.xcp.services.datasource.domain.Column">
+        <property name="property" value="numero_expediente"/>
+        <property name="sortable" value="true"/>
+      </bean>
+      <bean class="com.emc.xcp.services.datasource.domain.Column">
+        <property name="property" value="remitente"/>
+        <property name="sortable" value="true"/>
+      </bean>
+      <bean class="com.emc.xcp.services.datasource.domain.Column">
+        <property name="property" value="subject"/>
+        <property name="sortable" value="false"/>
+      </bean>
+      <bean class="com.emc.xcp.services.datasource.domain.Column">
+        <property name="property" value="unidad_responsable"/>
+        <property name="sortable" value="false"/>
+      </bean>
+      <bean class="com.emc.xcp.services.datasource.domain.Column">
+        <property name="property" value="r_creation_date"/>
+        <property name="sortable" value="true"/>
+      </bean>
+      <bean class="com.emc.xcp.services.datasource.domain.Column">
+        <property name="property" value="tipo_documento_origen"/>
+        <property name="sortable" value="false"/>
+      </bean>
+      <bean class="com.emc.xcp.services.datasource.domain.Column">
+        <property name="property" value="numero_documento_origen"/>
+        <property name="sortable" value="true"/>
+      </bean>
+      <bean class="com.emc.xcp.services.datasource.domain.Column">
+        <property name="property" value="fecha_documento_origen"/>
+        <property name="sortable" value="false"/>
+      </bean>
+      <bean class="com.emc.xcp.services.datasource.domain.Column">
+        <property name="property" value="r_object_type"/>
+        <property name="sortable" value="false"/>
+      </bean>
+      <bean class="com.emc.xcp.services.datasource.domain.Column">
+        <property name="property" value="summary"/>
+        <property name="sortable" value="false"/>
+      </bean>
+    </list>
+  </property>
+  <property name="expressionSet">
+    <bean class="com.emc.xcp.services.datasource.domain.expression.ExpressionSet">
+      <property name="expressions">
+        <list>
+          <bean class="com.emc.xcp.services.datasource.domain.expression.SimpleValueExpression">
+            <property name="caseSensitive" value="true"/>
+            <property name="exactMatch" value="false"/>
+            <property name="fuzzy" value="false"/>
+            <property name="property" value="numero_expediente"/>
+            <property name="repeated" value="false"/>
+            <property name="value" value="urlparam{input_numero_expediente}"/>
+            <property name="dataType" value="STRING"/>
+            <property name="operator" value="CONTAINS"/>
+          </bean>
+          <bean class="com.emc.xcp.services.datasource.domain.expression.FullTextExpression">
+            <property name="caseSensitive" value="false"/>
+            <property name="fuzzy" value="false"/>
+            <property name="repeated" value="false"/>
+            <property name="value" value="urlparam{q}"/>
+          </bean>
+        </list>
+      </property>
+      <property name="operator" value="AND"/>
+    </bean>
+  </property>
+  <property name="facets">
+    <list>
+      <bean class="com.emc.xcp.services.datasource.domain.Facet">
+        <property name="id" value="facet_unidad_responsable"/>
+        <property name="property" value="unidad_responsable"/>
+        <property name="sort" value="FREQUENCY"/>
+      </bean>
+      <bean class="com.emc.xcp.services.datasource.domain.Facet">
+        <property name="id" value="facet_tipo_documento_orig"/>
+        <property name="property" value="tipo_documento_origen"/>
+        <property name="sort" value="FREQUENCY"/>
+      </bean>
+      <bean class="com.emc.xcp.services.datasource.domain.Facet">
+        <property name="id" value="facet_remitente"/>
+        <property name="property" value="remitente"/>
+        <property name="sort" value="FREQUENCY"/>
+      </bean>
+      <bean class="com.emc.xcp.services.datasource.domain.Facet">
+        <property name="id" value="facet_es_confidencial"/>
+        <property name="property" value="es_confidencial"/>
+        <property name="sort" value="FREQUENCY"/>
+      </bean>
+    </list>
+  </property>
+  <property name="mapping" ref="sgd_buscar_sisgedmapping"/>
+  <property name="sorts">
+    <list>
+      <bean class="com.emc.xcp.services.datasource.domain.Sort">
+        <property name="ascending" value="true"/>
+        <property name="property" value="numero_expediente"/>
+      </bean>
+    </list>
+  </property>
+</bean>
+
+<bean class="com.emc.xcp.services.datasource.domain.mapping.RealTimeMapping" id="sgd_buscar_sisgedmapping">
+  <property name="rootType">
+    <bean class="com.emc.xcp.services.datasource.domain.mapping.ObjectType">
+      <property name="typeName" value="sgd_expediente_sisged"/>
+      <property name="attributes">
+        <map>
+          <entry key="es_confidencial">
+            <bean class="com.emc.xcp.services.datasource.domain.mapping.DocbaseAttribute">
+              <property name="persistentName" value="es_confidencial"/>
+            </bean>
+          </entry>
+          <entry key="fecha_documento_origen">
+            <bean class="com.emc.xcp.services.datasource.domain.mapping.DocbaseAttribute">
+              <property name="persistentName" value="fecha_documento_origen"/>
+            </bean>
+          </entry>
+          <entry key="id">
+            <bean class="com.emc.xcp.services.datasource.domain.mapping.DocbaseAttribute">
+              <property name="persistentName" value="r_object_id"/>
+            </bean>
+          </entry>
+          <entry key="numero_documento_origen">
+            <bean class="com.emc.xcp.services.datasource.domain.mapping.DocbaseAttribute">
+              <property name="persistentName" value="numero_documento_origen"/>
+            </bean>
+          </entry>
+          <entry key="numero_expediente">
+            <bean class="com.emc.xcp.services.datasource.domain.mapping.DocbaseAttribute">
+              <property name="persistentName" value="numero_expediente"/>
+            </bean>
+          </entry>
+          <entry key="r_creation_date">
+            <bean class="com.emc.xcp.services.datasource.domain.mapping.DocbaseAttribute">
+              <property name="persistentName" value="r_creation_date"/>
+            </bean>
+          </entry>
+          <entry key="r_object_type">
+            <bean class="com.emc.xcp.services.datasource.domain.mapping.DocbaseAttribute">
+              <property name="persistentName" value="r_object_type"/>
+            </bean>
+          </entry>
+          <entry key="remitente">
+            <bean class="com.emc.xcp.services.datasource.domain.mapping.DocbaseAttribute">
+              <property name="persistentName" value="remitente"/>
+            </bean>
+          </entry>
+          <entry key="subject">
+            <bean class="com.emc.xcp.services.datasource.domain.mapping.DocbaseAttribute">
+              <property name="persistentName" value="subject"/>
+            </bean>
+          </entry>
+          <entry key="tipo_documento_origen">
+            <bean class="com.emc.xcp.services.datasource.domain.mapping.DocbaseAttribute">
+              <property name="persistentName" value="tipo_documento_origen"/>
+            </bean>
+          </entry>
+          <entry key="unidad_responsable">
+            <bean class="com.emc.xcp.services.datasource.domain.mapping.DocbaseAttribute">
+              <property name="persistentName" value="unidad_responsable"/>
+            </bean>
+          </entry>
+        </map>
+      </property>
+    </bean>
+  </property>
+</bean>
+
+</beans>

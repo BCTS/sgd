@@ -1,0 +1,25 @@
+{
+sgd_buscar_sisged:{
+facet_unidad_responsable:{
+label: "${_UI_Facet_sgd_buscar_sisged_facet_unidad_responsable_facet_unidad_responsable}"
+}
+,
+facet_tipo_documento_orig:{
+label: "${_UI_Facet_sgd_buscar_sisged_facet_tipo_documento_orig_facet_tipo_documento_orig}"
+}
+,
+facet_remitente:{
+label: "${_UI_Facet_sgd_buscar_sisged_facet_remitente_facet_remitente}"
+}
+,
+facet_es_confidencial:{
+label: "${_UI_Facet_sgd_buscar_sisged_facet_es_confidencial_facet_es_confidencial}",
+
+values:{
+"true":"${_UI_Facet_sgd_buscar_sisged_facet_es_confidencial_true}",
+"false":"${_UI_Facet_sgd_buscar_sisged_facet_es_confidencial_false}"
+}
+}
+
+}
+}

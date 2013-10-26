@@ -1,0 +1,10 @@
+
+
+#############
+## xCP
+#############
+configuration/
+target/
+.index
+.generatedresources
+runapp.log

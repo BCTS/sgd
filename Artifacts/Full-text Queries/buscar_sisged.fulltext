@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fulltext:FullTextSearch xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fulltext="http://xcp.emc.com/search/fulltext" xmlns:nsAttributeDatatypes="http://xcp.emc.com/attribute_datatypes" xmlns:nsDataserviceContract="http://xcp.emc.com/DataserviceContract" xmlns:nsDatatypes="http://xcp.emc.com/datatypes" urn="urn:sgd:com.emc.xcp.artifact.search.fulltext:Artifacts/Full-text Queries/buscar_sisged.fulltext" categoryId="com.emc.xcp.artifact.search.fulltext" name="buscar_sisged" label="Buscar Expediente Sisted Fulltext" summaryColumn="true">
+  <datasource categoryId="com.emc.xcp.artifact.dataservice.datasourcecontract" name="buscar_sisged" label="Buscar Expediente Sisted Fulltext" implCategoryId="com.emc.xcp.artifact.search.fulltext">
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="q" label="Full-Text">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="input_numero_expediente" label="Numero Expediente">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <outputs xsi:type="nsDataserviceContract:AttributeElement" name="Result Count">
+      <attributeType xsi:type="nsAttributeDatatypes:IntegerType"/>
+    </outputs>
+    <outputs xsi:type="nsDataserviceContract:ArrayElement" name="Results">
+      <item xsi:type="nsDataserviceContract:StructureElement" name="Items">
+        <elements xsi:type="nsDataserviceContract:AttributeElement" name="id" label="Object ID">
+          <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+        </elements>
+        <elements xsi:type="nsDataserviceContract:AttributeElement" name="numero_expediente" label="Numero Expediente" sortable="true">
+          <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+        </elements>
+        <elements xsi:type="nsDataserviceContract:AttributeElement" name="remitente" label="Remitente" sortable="true">
+          <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+        </elements>
+        <elements xsi:type="nsDataserviceContract:AttributeElement" name="subject" label="Subject">
+          <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+        </elements>
+        <elements xsi:type="nsDataserviceContract:AttributeElement" name="unidad_responsable" label="Unidad Responsable">
+          <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+        </elements>
+        <elements xsi:type="nsDataserviceContract:AttributeElement" name="r_creation_date" label="Created on" sortable="true">
+          <attributeType xsi:type="nsAttributeDatatypes:DateTimeType"/>
+        </elements>
+        <elements xsi:type="nsDataserviceContract:AttributeElement" name="tipo_documento_origen" label="Tipo Documento Origen">
+          <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+        </elements>
+        <elements xsi:type="nsDataserviceContract:AttributeElement" name="numero_documento_origen" label="Numero Documento Origen" sortable="true">
+          <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+        </elements>
+        <elements xsi:type="nsDataserviceContract:AttributeElement" name="fecha_documento_origen" label="Fecha Documento Origen">
+          <attributeType xsi:type="nsAttributeDatatypes:DateTimeType"/>
+        </elements>
+        <elements xsi:type="nsDataserviceContract:AttributeElement" name="r_object_type" label="Object type" sortable="true" hidden="true">
+          <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+        </elements>
+        <elements xsi:type="nsDataserviceContract:AttributeElement" name="summary" label="Summary" hidden="true">
+          <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+        </elements>
+        <elements xsi:type="nsDataserviceContract:AttributeElement" name="matchingterms" label="MatchingTerms" repeating="true" hidden="true">
+          <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+        </elements>
+      </item>
+    </outputs>
+    <primaryElement>
+      <dataModel href="urn:sgd:com.emc.xcp.artifact.folder:Artifacts/Folders/expediente_sisged.folder#/"/>
+    </primaryElement>
+    <facets name="facet_unidad_responsable" label="Unidad Responsable">
+      <facetType xsi:type="nsDataserviceContract:AttributeDataTypeFacet">
+        <attributeType xsi:type="nsAttributeDatatypes:StringType" href="urn:sgd:com.emc.xcp.artifact.folder:Artifacts/Folders/expediente_sisged.folder#//@attributes[name='unidad_responsable']/@type"/>
+      </facetType>
+    </facets>
+    <facets name="facet_tipo_documento_orig" label="Tipo Documento Origen">
+      <facetType xsi:type="nsDataserviceContract:AttributeDataTypeFacet">
+        <attributeType xsi:type="nsAttributeDatatypes:StringType" href="urn:sgd:com.emc.xcp.artifact.folder:Artifacts/Folders/expediente_sisged.folder#//@attributes[name='tipo_documento_origen']/@type"/>
+      </facetType>
+    </facets>
+    <facets name="facet_remitente" label="Remitente">
+      <facetType xsi:type="nsDataserviceContract:AttributeDataTypeFacet">
+        <attributeType xsi:type="nsAttributeDatatypes:StringType" href="urn:sgd:com.emc.xcp.artifact.folder:Artifacts/Folders/expediente_sisged.folder#//@attributes[name='remitente']/@type"/>
+      </facetType>
+    </facets>
+    <facets name="facet_es_confidencial" label="Es Confidencial">
+      <facetType xsi:type="nsDataserviceContract:AttributeDataTypeFacet">
+        <attributeType xsi:type="nsAttributeDatatypes:BooleanType" href="urn:sgd:com.emc.xcp.artifact.folder:Artifacts/Folders/expediente_sisged.folder#//@attributes[name='es_confidencial']/@type"/>
+      </facetType>
+    </facets>
+  </datasource>
+  <inputParameters label="Numero Expediente" name="numero_expediente">
+    <formInputs xsi:type="fulltext:FullTextFormInput" operator="com.emc.xcp.model.common.StringOperator:CONTAIN">
+      <contextSelection>
+        <parentRef>
+          <dataRef href="urn:sgd:com.emc.xcp.artifact.folder:Artifacts/Folders/expediente_sisged.folder#/"/>
+        </parentRef>
+        <dataRef href="urn:sgd:com.emc.xcp.artifact.folder:Artifacts/Folders/expediente_sisged.folder#//@attributes[name='numero_expediente']"/>
+      </contextSelection>
+    </formInputs>
+  </inputParameters>
+  <columns label="Object ID">
+    <contextSelection>
+      <parentRef>
+        <dataRef href="urn:sgd:com.emc.xcp.artifact.folder:Artifacts/Folders/expediente_sisged.folder#/"/>
+      </parentRef>
+      <dataRef href="urn:xcp:com.emc.xcp.artifact.basetype:Artifacts/Base Type/basetype.basetype#//@attributes[name='r_object_id']"/>
+    </contextSelection>
+  </columns>
+  <columns label="Numero Expediente" sortable="true">
+    <contextSelection>
+      <parentRef>
+        <dataRef href="urn:sgd:com.emc.xcp.artifact.folder:Artifacts/Folders/expediente_sisged.folder#/"/>
+      </parentRef>
+      <dataRef href="urn:sgd:com.emc.xcp.artifact.folder:Artifacts/Folders/expediente_sisged.folder#//@attributes[name='numero_expediente']"/>
+    </contextSelection>
+  </columns>
+  <columns label="Remitente" sortable="true">
+    <contextSelection>
+      <parentRef>
+        <dataRef href="urn:sgd:com.emc.xcp.artifact.folder:Artifacts/Folders/expediente_sisged.folder#/"/>
+      </parentRef>
+      <dataRef href="urn:sgd:com.emc.xcp.artifact.folder:Artifacts/Folders/expediente_sisged.folder#//@attributes[name='remitente']"/>
+    </contextSelection>
+  </columns>
+  <columns label="Subject">
+    <contextSelection>
+      <parentRef>
+        <dataRef href="urn:sgd:com.emc.xcp.artifact.folder:Artifacts/Folders/expediente_sisged.folder#/"/>
+      </parentRef>
+      <dataRef href="urn:xcp:com.emc.xcp.artifact.folder:Artifacts/Folders/dm_folder.folder#//@attributes[name='subject']"/>
+    </contextSelection>
+  </columns>
+  <columns label="Unidad Responsable">
+    <contextSelection>
+      <parentRef>
+        <dataRef href="urn:sgd:com.emc.xcp.artifact.folder:Artifacts/Folders/expediente_sisged.folder#/"/>
+      </parentRef>
+      <dataRef href="urn:sgd:com.emc.xcp.artifact.folder:Artifacts/Folders/expediente_sisged.folder#//@attributes[name='unidad_responsable']"/>
+    </contextSelection>
+  </columns>
+  <columns label="Created on" sortable="true">
+    <contextSelection>
+      <parentRef>
+        <dataRef href="urn:sgd:com.emc.xcp.artifact.folder:Artifacts/Folders/expediente_sisged.folder#/"/>
+      </parentRef>
+      <dataRef href="urn:xcp:com.emc.xcp.artifact.basetype:Artifacts/Base Type/basetype.basetype#//@attributes[name='r_creation_date']"/>
+    </contextSelection>
+  </columns>
+  <columns label="Tipo Documento Origen">
+    <contextSelection>
+      <parentRef>
+        <dataRef href="urn:sgd:com.emc.xcp.artifact.folder:Artifacts/Folders/expediente_sisged.folder#/"/>
+      </parentRef>
+      <dataRef href="urn:sgd:com.emc.xcp.artifact.folder:Artifacts/Folders/expediente_sisged.folder#//@attributes[name='tipo_documento_origen']"/>
+    </contextSelection>
+  </columns>
+  <columns label="Numero Documento Origen" sortable="true">
+    <contextSelection>
+      <parentRef>
+        <dataRef href="urn:sgd:com.emc.xcp.artifact.folder:Artifacts/Folders/expediente_sisged.folder#/"/>
+      </parentRef>
+      <dataRef href="urn:sgd:com.emc.xcp.artifact.folder:Artifacts/Folders/expediente_sisged.folder#//@attributes[name='numero_documento_origen']"/>
+    </contextSelection>
+  </columns>
+  <columns label="Fecha Documento Origen">
+    <contextSelection>
+      <parentRef>
+        <dataRef href="urn:sgd:com.emc.xcp.artifact.folder:Artifacts/Folders/expediente_sisged.folder#/"/>
+      </parentRef>
+      <dataRef href="urn:sgd:com.emc.xcp.artifact.folder:Artifacts/Folders/expediente_sisged.folder#//@attributes[name='fecha_documento_origen']"/>
+    </contextSelection>
+  </columns>
+  <defaultSort ascending="true">
+    <contextSelection>
+      <parentRef>
+        <dataRef href="urn:sgd:com.emc.xcp.artifact.folder:Artifacts/Folders/expediente_sisged.folder#/"/>
+      </parentRef>
+      <dataRef href="urn:sgd:com.emc.xcp.artifact.folder:Artifacts/Folders/expediente_sisged.folder#//@attributes[name='numero_expediente']"/>
+    </contextSelection>
+  </defaultSort>
+  <dataType xsi:type="nsDatatypes:Folder" href="urn:sgd:com.emc.xcp.artifact.folder:Artifacts/Folders/expediente_sisged.folder#/"/>
+  <filters xsi:type="fulltext:StringFilter" name="unidad_responsable" label="Unidad Responsable" orderBy="FREQUENCY">
+    <contextSelection>
+      <parentRef>
+        <dataRef href="urn:sgd:com.emc.xcp.artifact.folder:Artifacts/Folders/expediente_sisged.folder#/"/>
+      </parentRef>
+      <dataRef href="urn:sgd:com.emc.xcp.artifact.folder:Artifacts/Folders/expediente_sisged.folder#//@attributes[name='unidad_responsable']"/>
+    </contextSelection>
+    <groupBy xsi:type="fulltext:StringGroupBy"/>
+  </filters>
+  <filters xsi:type="fulltext:StringFilter" name="tipo_documento_orig" label="Tipo Documento Origen" orderBy="FREQUENCY">
+    <contextSelection>
+      <parentRef>
+        <dataRef href="urn:sgd:com.emc.xcp.artifact.folder:Artifacts/Folders/expediente_sisged.folder#/"/>
+      </parentRef>
+      <dataRef href="urn:sgd:com.emc.xcp.artifact.folder:Artifacts/Folders/expediente_sisged.folder#//@attributes[name='tipo_documento_origen']"/>
+    </contextSelection>
+    <groupBy xsi:type="fulltext:StringGroupBy"/>
+  </filters>
+  <filters xsi:type="fulltext:StringFilter" name="remitente" label="Remitente" orderBy="FREQUENCY">
+    <contextSelection>
+      <parentRef>
+        <dataRef href="urn:sgd:com.emc.xcp.artifact.folder:Artifacts/Folders/expediente_sisged.folder#/"/>
+      </parentRef>
+      <dataRef href="urn:sgd:com.emc.xcp.artifact.folder:Artifacts/Folders/expediente_sisged.folder#//@attributes[name='remitente']"/>
+    </contextSelection>
+    <groupBy xsi:type="fulltext:StringGroupBy"/>
+  </filters>
+  <filters xsi:type="fulltext:BooleanFilter" name="es_confidencial" label="Es Confidencial" orderBy="FREQUENCY">
+    <contextSelection>
+      <parentRef>
+        <dataRef href="urn:sgd:com.emc.xcp.artifact.folder:Artifacts/Folders/expediente_sisged.folder#/"/>
+      </parentRef>
+      <dataRef href="urn:sgd:com.emc.xcp.artifact.folder:Artifacts/Folders/expediente_sisged.folder#//@attributes[name='es_confidencial']"/>
+    </contextSelection>
+    <groupBy xsi:type="fulltext:BooleanGroupBy"/>
+  </filters>
+</fulltext:FullTextSearch>

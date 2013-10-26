@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nsDatatypes:Folder xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:nsAttributeDatatypes="http://xcp.emc.com/attribute_datatypes" xmlns:nsDataserviceContract="http://xcp.emc.com/DataserviceContract" xmlns:nsDatatypes="http://xcp.emc.com/datatypes" urn="urn:sgd:com.emc.xcp.artifact.folder:Artifacts/Folders/expediente_sisged.folder" categoryId="com.emc.xcp.artifact.folder" name="expediente_sisged" label="Expediente SISGED" commentable="true">
+  <attributes name="numero_expediente" label="Numero Expediente">
+    <type xsi:type="nsAttributeDatatypes:StringType" length="64"/>
+  </attributes>
+  <attributes name="procedencia" label="Procedencia">
+    <type xsi:type="nsAttributeDatatypes:StringType" length="64"/>
+  </attributes>
+  <attributes name="remitente" label="Remitente">
+    <type xsi:type="nsAttributeDatatypes:StringType" length="64"/>
+  </attributes>
+  <attributes name="tipo_identificacion" label="Tipo Identificacion">
+    <type xsi:type="nsAttributeDatatypes:StringType" length="64"/>
+  </attributes>
+  <attributes name="numero_identificacion" label="Numero Identificacion">
+    <type xsi:type="nsAttributeDatatypes:StringType" length="64"/>
+  </attributes>
+  <attributes name="tipo_documento_origen" label="Tipo Documento Origen">
+    <type xsi:type="nsAttributeDatatypes:StringType" length="64"/>
+  </attributes>
+  <attributes name="numero_documento_origen" label="Numero Documento Origen">
+    <type xsi:type="nsAttributeDatatypes:StringType" length="64"/>
+  </attributes>
+  <attributes name="fecha_documento_origen" label="Fecha Documento Origen">
+    <type xsi:type="nsAttributeDatatypes:DateTimeType"/>
+  </attributes>
+  <attributes name="unidad_responsable" label="Unidad Responsable">
+    <type xsi:type="nsAttributeDatatypes:StringType" length="64"/>
+  </attributes>
+  <attributes name="ampliacion_asunto" label="Ampliacion Asunto">
+    <type xsi:type="nsAttributeDatatypes:StringType" length="500"/>
+  </attributes>
+  <attributes name="direccion" label="Direccion">
+    <type xsi:type="nsAttributeDatatypes:StringType" length="64"/>
+  </attributes>
+  <attributes name="departamento" label="Departamento">
+    <type xsi:type="nsAttributeDatatypes:StringType" length="64"/>
+  </attributes>
+  <attributes name="provincia" label="Provincia">
+    <type xsi:type="nsAttributeDatatypes:StringType" length="64"/>
+  </attributes>
+  <attributes name="distrito" label="Distrito">
+    <type xsi:type="nsAttributeDatatypes:StringType" length="64"/>
+  </attributes>
+  <attributes name="telefono" label="Telefono">
+    <type xsi:type="nsAttributeDatatypes:StringType" length="64"/>
+  </attributes>
+  <attributes name="fax" label="Fax">
+    <type xsi:type="nsAttributeDatatypes:StringType" length="64"/>
+  </attributes>
+  <attributes name="email" label="Email">
+    <type xsi:type="nsAttributeDatatypes:StringType" length="64"/>
+  </attributes>
+  <attributes name="es_conforme" label="Es Conforme">
+    <type xsi:type="nsAttributeDatatypes:BooleanType"/>
+  </attributes>
+  <attributes name="es_confidencial" label="Es Confidencial">
+    <type xsi:type="nsAttributeDatatypes:BooleanType"/>
+  </attributes>
+  <attributes name="inicia_pas" label="Inicia PAS">
+    <type xsi:type="nsAttributeDatatypes:BooleanType"/>
+  </attributes>
+  <accessControlPolicy inheritedFromParentFolder="true"/>
+  <defaultFolderPath exprStr="parameters.sgd.ruta_expedientes"/>
+  <dataActionContracts categoryId="com.emc.xcp.artifact.dataservice.dataactioncontract" name="da_def_create_expediente_sisged" label="Create Expediente SISGED" implCategoryId="com.emc.xcp.artifact.folder">
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="ampliacion_asunto" label="Ampliacion Asunto">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="departamento" label="Departamento">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="direccion" label="Direccion">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="distrito" label="Distrito">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="email" label="Email">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="es_confidencial" label="Es Confidencial">
+      <attributeType xsi:type="nsAttributeDatatypes:BooleanType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="es_conforme" label="Es Conforme">
+      <attributeType xsi:type="nsAttributeDatatypes:BooleanType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="fax" label="Fax">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="fecha_documento_origen" label="Fecha Documento Origen">
+      <attributeType xsi:type="nsAttributeDatatypes:DateTimeType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="inicia_pas" label="Inicia PAS">
+      <attributeType xsi:type="nsAttributeDatatypes:BooleanType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="numero_documento_origen" label="Numero Documento Origen">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="numero_expediente" label="Numero Expediente">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="numero_identificacion" label="Numero Identificacion">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="procedencia" label="Procedencia">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="provincia" label="Provincia">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="remitente" label="Remitente">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="telefono" label="Telefono">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="tipo_documento_origen" label="Tipo Documento Origen">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="tipo_identificacion" label="Tipo Identificacion">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="unidad_responsable" label="Unidad Responsable">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <primaryElement dataModel="/"/>
+    <actionType type="Create"/>
+  </dataActionContracts>
+  <dataActionContracts categoryId="com.emc.xcp.artifact.dataservice.dataactioncontract" name="da_def_update_expediente_sisged" label="Update Expediente SISGED" implCategoryId="com.emc.xcp.artifact.folder">
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="ampliacion_asunto" label="Ampliacion Asunto">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="departamento" label="Departamento">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="direccion" label="Direccion">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="distrito" label="Distrito">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="email" label="Email">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="es_confidencial" label="Es Confidencial">
+      <attributeType xsi:type="nsAttributeDatatypes:BooleanType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="es_conforme" label="Es Conforme">
+      <attributeType xsi:type="nsAttributeDatatypes:BooleanType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="fax" label="Fax">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="fecha_documento_origen" label="Fecha Documento Origen">
+      <attributeType xsi:type="nsAttributeDatatypes:DateTimeType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="inicia_pas" label="Inicia PAS">
+      <attributeType xsi:type="nsAttributeDatatypes:BooleanType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="numero_documento_origen" label="Numero Documento Origen">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="numero_expediente" label="Numero Expediente">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="numero_identificacion" label="Numero Identificacion">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="procedencia" label="Procedencia">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="provincia" label="Provincia">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="remitente" label="Remitente">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="telefono" label="Telefono">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="tipo_documento_origen" label="Tipo Documento Origen">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="tipo_identificacion" label="Tipo Identificacion">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="unidad_responsable" label="Unidad Responsable">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <primaryElement dataModel="/"/>
+    <actionType type="Update"/>
+  </dataActionContracts>
+  <dataActionContracts categoryId="com.emc.xcp.artifact.dataservice.dataactioncontract" name="da_def_delete_expediente_sisged" label="Delete Expediente SISGED" implCategoryId="com.emc.xcp.artifact.folder">
+    <primaryElement dataModel="/"/>
+    <actionType type="Delete"/>
+  </dataActionContracts>
+  <superType xsi:type="nsDatatypes:Folder" href="urn:xcp:com.emc.xcp.artifact.folder:Artifacts/Folders/dm_folder.folder#/"/>
+</nsDatatypes:Folder>

@@ -1,0 +1,8 @@
+{
+"sgd":{
+"ruta_expedientes":{
+"label": "${_UI_AppParametersgd_ruta_expedientes_label}",
+"description": ""
+}
+}
+}
